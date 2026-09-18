@@ -7,11 +7,15 @@ from dataclasses import dataclass
 class Config:
     exchange_id: str = os.environ.get("BOT_EXCHANGE", "binance")
     symbol: str = os.environ.get("BOT_SYMBOL", "BTC/USDT")
-    timeframe: str = os.environ.get("BOT_TIMEFRAME", "15m")
+    # 1h reduces the noise-driven crossovers a 15m timeframe produces.
+    timeframe: str = os.environ.get("BOT_TIMEFRAME", "1h")
 
     # SMA crossover strategy
-    fast_period: int = int(os.environ.get("BOT_FAST_PERIOD", 10))
-    slow_period: int = int(os.environ.get("BOT_SLOW_PERIOD", 30))
+    fast_period: int = int(os.environ.get("BOT_FAST_PERIOD", 20))
+    slow_period: int = int(os.environ.get("BOT_SLOW_PERIOD", 50))
+    # Minimum fast/slow gap (as a fraction of price) before a crossover counts,
+    # to filter out chatter around the crossing point.
+    min_gap_pct: float = float(os.environ.get("BOT_MIN_GAP_PCT", 0.002))
 
     # Capital & risk
     initial_capital: float = float(os.environ.get("BOT_CAPITAL", 25.0))

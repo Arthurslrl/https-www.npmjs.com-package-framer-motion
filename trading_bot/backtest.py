@@ -40,11 +40,11 @@ class BacktestResult:
 
 def run_backtest(candles: list[list[float]], fast_period: int, slow_period: int,
                   initial_capital: float, fee_rate: float, position_fraction: float = 1.0,
-                  timeframe: str = "15m") -> BacktestResult:
+                  timeframe: str = "15m", min_gap_pct: float = 0.0) -> BacktestResult:
     """candles: list of [timestamp_ms, open, high, low, close, volume], oldest first."""
     closes = [c[4] for c in candles]
     timestamps = [c[0] for c in candles]
-    signals = generate_signals(closes, fast_period, slow_period)
+    signals = generate_signals(closes, fast_period, slow_period, min_gap_pct=min_gap_pct)
 
     cash = initial_capital
     position_amount = 0.0

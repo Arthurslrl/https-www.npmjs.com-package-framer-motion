@@ -53,7 +53,8 @@ def run_paper_trader(config: Config, iterations: int | None = None) -> None:
         candles = fetch_ohlcv(exchange, config.symbol, config.timeframe,
                                limit=max(config.slow_period + 5, 50))
         closes = [c[4] for c in candles]
-        signals = generate_signals(closes, config.fast_period, config.slow_period)
+        signals = generate_signals(closes, config.fast_period, config.slow_period,
+                                    min_gap_pct=config.min_gap_pct)
 
         latest_ts = candles[-1][0]
         latest_price = closes[-1]

@@ -31,6 +31,7 @@ def cmd_backtest(config: Config, days: int) -> None:
         fee_rate=config.fee_rate,
         position_fraction=config.position_fraction,
         timeframe=config.timeframe,
+        min_gap_pct=config.min_gap_pct,
     )
 
     print("\n--- Backtest results ---")

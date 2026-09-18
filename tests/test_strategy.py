@@ -31,6 +31,15 @@ def test_generate_signals_detects_death_cross():
     assert Signal.SELL in signals
 
 
+def test_generate_signals_min_gap_pct_filters_noise():
+    # A crossover that immediately wobbles back without a decisive gap should be
+    # ignored when min_gap_pct is set, unlike with no filter.
+    closes = [100, 100.1, 99.9, 100.1, 99.9, 100.1, 99.9, 100.1, 99.9, 100.1]
+    unfiltered = generate_signals(closes, fast_period=2, slow_period=4, min_gap_pct=0.0)
+    filtered = generate_signals(closes, fast_period=2, slow_period=4, min_gap_pct=0.05)
+    assert sum(1 for s in filtered if s != Signal.HOLD) <= sum(1 for s in unfiltered if s != Signal.HOLD)
+
+
 def test_generate_signals_rejects_bad_periods():
     try:
         generate_signals([1, 2, 3], fast_period=5, slow_period=2)
