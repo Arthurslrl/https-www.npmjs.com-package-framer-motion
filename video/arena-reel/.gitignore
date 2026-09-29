@@ -3,3 +3,5 @@ out/sheet*.png
 out/audio.wav
 out/video-silent.mp4
 __pycache__/
+out/arena-reel.mp4
+out/check*.png
