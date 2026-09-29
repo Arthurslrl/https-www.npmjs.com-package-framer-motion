@@ -1,0 +1,11 @@
+[
+  { "start": 0.10, "end": 1.90, "text": "Et si quatre Claude codaient ta tâche… en même temps ?" },
+  { "start": 2.20, "end": 7.60, "text": "Arena Mode lance plusieurs agents sur la même tâche, classe leurs solutions et te recommande la meilleure." },
+  { "start": 8.40, "end": 12.20, "text": "Dans Claude Code : ajoute la marketplace depuis le repo GitHub…" },
+  { "start": 13.80, "end": 15.60, "text": "puis installe le plugin." },
+  { "start": 20.30, "end": 23.60, "text": "Lance-le avec arena-mode deux-points arena, puis ta tâche." },
+  { "start": 25.20, "end": 28.80, "text": "Depuis ton terminal ? Mêmes commandes, avec claude plugin devant." },
+  { "start": 30.30, "end": 36.80, "text": "Sans plugin : copie le fichier SKILL.md dans le dossier skills de ton projet… et tape juste slash arena." },
+  { "start": 39.30, "end": 45.60, "text": "Règle le nombre d'agents, la stratégie et les modèles. Attention : il ne se lance jamais seul, et consomme plus de tokens." },
+  { "start": 46.30, "end": 49.30, "text": "Enregistre ce Reel pour garder les commandes." }
+]

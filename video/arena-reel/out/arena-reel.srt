@@ -1,0 +1,35 @@
+1
+00:00:00,100 --> 00:00:02,150
+Et si quatre Claude codaient ta tâche… en même temps ?
+
+2
+00:00:02,200 --> 00:00:07,850
+Arena Mode lance plusieurs agents sur la même tâche, classe leurs solutions et te recommande la meilleure.
+
+3
+00:00:08,400 --> 00:00:12,450
+Dans Claude Code : ajoute la marketplace depuis le repo GitHub…
+
+4
+00:00:13,800 --> 00:00:15,850
+puis installe le plugin.
+
+5
+00:00:20,300 --> 00:00:23,850
+Lance-le avec arena-mode deux-points arena, puis ta tâche.
+
+6
+00:00:25,200 --> 00:00:29,050
+Depuis ton terminal ? Mêmes commandes, avec claude plugin devant.
+
+7
+00:00:30,300 --> 00:00:37,050
+Sans plugin : copie le fichier SKILL.md dans le dossier skills de ton projet… et tape juste slash arena.
+
+8
+00:00:39,300 --> 00:00:45,850
+Règle le nombre d'agents, la stratégie et les modèles. Attention : il ne se lance jamais seul, et consomme plus de tokens.
+
+9
+00:00:46,300 --> 00:00:49,550
+Enregistre ce Reel pour garder les commandes.

@@ -1,0 +1,5 @@
+out/stills/
+out/sheet*.png
+out/audio.wav
+out/video-silent.mp4
+__pycache__/
